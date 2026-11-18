@@ -23,7 +23,7 @@ pipeline {
 
         stage('Test Website') {
             steps {
-                sh 'curl -f http://localhost:8081'
+                sh 'docker exec mywebsite wget -qO- http://localhost'
             }
         }
     }
